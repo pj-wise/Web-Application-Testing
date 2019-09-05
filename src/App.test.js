@@ -4,5 +4,6 @@ import * as rtl from "@testing-library/react";
 
 test("App renders without crashing", () => {
   const container = rtl.render(<App />);
-  console.log(container.debug());
+  // console.log(container.debug());
+  const h2Element = container.getByText(/test/i);
 });

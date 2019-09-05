@@ -29,6 +29,6 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^9.1.4"
+    "@testing-library/react --watchAll": "^9.1.4"
   }
 }
