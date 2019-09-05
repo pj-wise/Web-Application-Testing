@@ -37,7 +37,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='App' onChange={this.outAlert}>
-        <h2>Scoreboard</h2>
+        <h1>Scoreboard</h1>
         <Display state={this.state} />
         <Dashboard
           ballHandler={this.ballHandler}

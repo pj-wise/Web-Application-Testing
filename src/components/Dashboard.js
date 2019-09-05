@@ -3,10 +3,16 @@ import React from "react";
 const Dashboard = props => {
   return (
     <div>
-      <button className='dashButton' onClick={props.ballHandler}>
+      <button
+        data-testid='ballBtn'
+        className='dashButton'
+        onClick={props.ballHandler}>
         Ball
       </button>
-      <button className='dashButton' onClick={props.strikeHandler}>
+      <button
+        data-testid='strikeBtn'
+        className='dashButton'
+        onClick={props.strikeHandler}>
         Strike
       </button>
       <button className='dashButton' onClick={props.hitHandler}>
