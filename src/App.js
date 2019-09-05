@@ -24,6 +24,10 @@ export default class App extends Component {
       : this.setState({ strikes: this.state.strikes + 1 });
   };
 
+  hitHandler = () => {
+    return this.setState({ balls: 0, strikes: 0 });
+  };
+
   render() {
     return (
       <div className='App'>
@@ -32,6 +36,7 @@ export default class App extends Component {
         <Dashboard
           ballHandler={this.ballHandler}
           strikeHandler={this.strikeHandler}
+          hitHandler={this.hitHandler}
         />
       </div>
     );
