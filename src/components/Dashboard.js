@@ -3,9 +3,18 @@ import React from "react";
 const Dashboard = props => {
   return (
     <div>
-      <button onClick={props.ballHandler}>Ball</button>
-      <button onClick={props.strikeHandler}>Strike</button>
-      <button onClick={props.hitHandler}>Hit</button>
+      <button className='dashButton' onClick={props.ballHandler}>
+        Ball
+      </button>
+      <button className='dashButton' onClick={props.strikeHandler}>
+        Strike
+      </button>
+      <button className='dashButton' onClick={props.hitHandler}>
+        Hit
+      </button>
+      <button className='dashButton' onClick={props.foulHandler}>
+        Foul
+      </button>
     </div>
   );
 };

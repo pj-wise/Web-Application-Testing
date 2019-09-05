@@ -28,15 +28,22 @@ export default class App extends Component {
     return this.setState({ balls: 0, strikes: 0 });
   };
 
+  foulHandler = () => {
+    return this.state.strikes < 2
+      ? this.setState({ strikes: this.state.strikes + 1 })
+      : this.state;
+  };
+
   render() {
     return (
-      <div className='App'>
-        <h2>test</h2>
+      <div className='App' onChange={this.outAlert}>
+        <h2>Scoreboard</h2>
         <Display state={this.state} />
         <Dashboard
           ballHandler={this.ballHandler}
           strikeHandler={this.strikeHandler}
           hitHandler={this.hitHandler}
+          foulHandler={this.foulHandler}
         />
       </div>
     );
