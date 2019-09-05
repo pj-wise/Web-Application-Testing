@@ -18,12 +18,21 @@ export default class App extends Component {
       : this.setState({ balls: this.state.balls + 1 });
   };
 
+  strikeHandler = () => {
+    return this.state.strikes === 2
+      ? this.setState({ balls: 0, strikes: 0 })
+      : this.setState({ strikes: this.state.strikes + 1 });
+  };
+
   render() {
     return (
       <div className='App'>
         <h2>test</h2>
         <Display state={this.state} />
-        <Dashboard ballHandler={this.ballHandler} />
+        <Dashboard
+          ballHandler={this.ballHandler}
+          strikeHandler={this.strikeHandler}
+        />
       </div>
     );
   }
